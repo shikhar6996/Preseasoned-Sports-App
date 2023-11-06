@@ -1,0 +1,171 @@
+import { StyleSheet, Platform } from 'react-native'
+
+import {
+  responsiveSize,
+  Colors,
+  respFontSize,
+  Fonts,
+  height,
+  width,
+} from '@/Utils'
+
+const MODAL_TOP = Platform.OS === 'ios' ? 2 : 2.5
+export const styles = StyleSheet.create({
+  transparentPressable: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '100%',
+    width: '100%',
+    backgroundColor: 'transparent',
+  },
+  startThreadBtn: {
+    borderWidth: 1,
+    borderColor: Colors.primary,
+    padding: responsiveSize(10),
+    borderRadius: responsiveSize(10),
+    paddingHorizontal: responsiveSize(20),
+    backgroundColor: Colors.primary,
+  },
+  startThreadText: {
+    color: Colors.white,
+    fontFamily: Fonts.GilroyMedium,
+    fontSize: respFontSize(14),
+  },
+  threadsContentView: {
+    zIndex: 99,
+    position: 'absolute',
+    height: responsiveSize(230),
+    width: responsiveSize(400),
+    backgroundColor: Colors.darkLiver,
+    padding: responsiveSize(30),
+    borderRadius: responsiveSize(20),
+    top: height / MODAL_TOP,
+    left: width - (width - 30),
+  },
+  threadName: {
+    color: Colors.white,
+    fontFamily: Fonts.GilroyBold,
+    fontSize: respFontSize(15),
+  },
+  newMessageText: {
+    color: Colors.white,
+    fontFamily: Fonts.GilroyMedium,
+    fontSize: respFontSize(10),
+  },
+  date: {
+    color: Colors.primary,
+    fontFamily: Fonts.GilroyBold,
+    fontSize: respFontSize(13),
+    alignSelf: 'center',
+  },
+  threadDescription: {
+    color: Colors.silver,
+    fontFamily: Fonts.GilroyMedium,
+    fontSize: respFontSize(15),
+    marginTop: responsiveSize(5),
+    lineHeight: responsiveSize(23),
+  },
+  cardContainerStyle: {
+    width: '100%',
+    marginBottom: responsiveSize(21),
+    alignItems: 'stretch',
+    flex: 1,
+  },
+  welcomeViewButton: {
+    borderWidth: 1,
+    borderColor: Colors.primary,
+    padding: responsiveSize(10),
+    borderRadius: responsiveSize(8),
+    backgroundColor: Colors.primary,
+    width: '48%',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  welcomeViewButtonText: {
+    color: Colors.white,
+    fontFamily: Fonts.GilroyMedium,
+    fontSize: respFontSize(14),
+  },
+  welcomeMessageView: {
+    marginTop: responsiveSize(25),
+    borderWidth: 1,
+    borderColor: Colors.primary,
+    borderRadius: responsiveSize(10),
+    // height: responsiveSize(200),
+    padding: responsiveSize(22),
+  },
+  welcomeMessage: {
+    color: Colors.white,
+    fontFamily: Fonts.GilroyMedium,
+    fontSize: respFontSize(17),
+    lineHeight: responsiveSize(26),
+  },
+  buttonsView: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginTop: responsiveSize(20),
+  },
+  postInCommunityButton: {
+    backgroundColor: Colors.secondary,
+  },
+  flatlistView: {
+    flex: 1,
+    marginTop: responsiveSize(20),
+    paddingBottom: responsiveSize(20),
+  },
+  mainView: {
+    paddingHorizontal: responsiveSize(30),
+    paddingBottom: responsiveSize(30),
+    flex: 1,
+  },
+  rowView: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: '100%',
+  },
+  leftThreadView: { flex: 1, marginRight: responsiveSize(10) },
+  mainThreadView: {
+    flexDirection: 'row',
+    padding: responsiveSize(18),
+    // flex: 1,
+  },
+  mewMessageView: {
+    padding: responsiveSize(5),
+    backgroundColor: Colors.primary,
+    borderRadius: responsiveSize(5),
+    marginBottom: responsiveSize(10),
+    alignItems: 'center',
+  },
+
+  textInputStyles: {
+    borderBottomWidth: responsiveSize(3),
+    borderColor: Colors.white,
+    width: '100%',
+    color: Colors.white,
+    marginTop: responsiveSize(20),
+    fontSize: respFontSize(15),
+    fontFamily: Fonts.GilroyMedium,
+    paddingVertical: 5,
+  },
+  countThreadName: {
+    fontSize: respFontSize(13),
+    fontFamily: Fonts.GilroyMedium,
+    alignSelf: 'flex-end',
+    color: Colors.white,
+    marginTop: responsiveSize(10),
+  },
+  createThreadBtn: {
+    width: responsiveSize(200),
+    backgroundColor: Colors.primary,
+    alignSelf: 'center',
+    alignItems: 'center',
+    borderRadius: responsiveSize(8),
+    marginTop: responsiveSize(10),
+  },
+  createThreadText: {
+    fontSize: respFontSize(12),
+    color: Colors.white,
+    fontFamily: Fonts.GilroyMedium,
+    padding: responsiveSize(10),
+  },
+})
